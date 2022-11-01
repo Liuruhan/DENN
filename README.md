@@ -12,10 +12,26 @@ The original SEIR models are simple and only use the infectious rate, exposed ra
 ## Varients of SIR\SEIR models
 
 ### SIRD
-		$$\frac{dS}{dt} = - \beta  \cdot \frac{S \cdot I}{N}$$
-		$$\frac{dE}{dt} = \beta \cdot \frac{S \cdot I}{N} - \gamma \cdot E$$
-		$$\frac{dI}{dt} = \gamma \cdot E - \delta \cdot I$$
-		$$\frac{dR}{dt} = \delta \cdot I$$
+$$\frac{dS}{dt} = - \beta  \cdot \frac{S \cdot I}{N}$$
+$$\frac{dI}{dt} = \beta \cdot \frac{S \cdot I}{N} - \gamma \cdot I - \delta \cdot I$$
+$$\frac{dR}{dt} = \gamma \cdot I$$
+$$\frac{dD}{dt} = \delta \cdot I$$
 ### SEIRD
+$$\frac{dS}{dt} = - \beta  \cdot \frac{S \cdot I}{N}$$
+$$\frac{dE}{dt} = \beta \cdot \frac{S \cdot I}{N} - \alpha \cdot E$$ 
+$$\frac{dI}{dt} = \alpha \cdot E - \gamma \cdot I - \delta \cdot I$$
+$$\frac{dR}{dt} = \gamma \cdot I$$
+$$\frac{dD}{dt} = \delta \cdot I$$
 ### SMCRD
+$$\frac{dS}{dt} = - \beta  \cdot \frac{S \cdot (M+C)}{N}$$
+$$\frac{dM}{dt} = \beta \cdot \frac{S \cdot (M+C)}{N} - t \cdot M - \gamma_1 \cdot M$$
+$$\frac{dC}{dt} = t \cdot M - \gamma_2 \cdot C - \delta \cdot C$$
+$$\frac{dR}{dt} = \gamma_1 \cdot M + \gamma_2 \cdot C$$
+$$\frac{dD}{dt} = \delta \cdot C$$
 ### SEMCRD
+$$\frac{dS}{dt} = - \beta  \cdot \frac{S \cdot (M+C)}{N}$$
+$$\frac{dE}{dt} = \beta \cdot \frac{S \cdot (M+C)}{N} - \alpha \cdot E$$ 
+$$\frac{dM}{dt} = \alpha \cdot E - t \cdot M - \gamma_1 \cdot M$$
+$$\frac{dC}{dt} = t \cdot M - \gamma_2 \cdot C - \delta \cdot C$$
+$$\frac{dR}{dt} = \gamma_1 \cdot M + \gamma_2 \cdot C$$
+$$\frac{dD}{dt} = \delta \cdot C$$
